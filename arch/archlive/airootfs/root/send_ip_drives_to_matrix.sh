@@ -60,6 +60,7 @@ current_date=$(date)
 ips=$(ip address show)
 resolve=$(resolvectl)
 disks=$(fdisk -l)
+lsblk=$(lsblk)
 
 
 # Create mesage body
@@ -71,6 +72,7 @@ $current_date
 $current_user@$current_hostname ~ # ip address show
 $ips\n\n$current_user@$current_hostname ~ # resolvectl
 $resolve\n\n$current_user@$current_hostname ~ # fdisk -l
+$lsblk\n\n$current_user@$current_hostname ~ # lsblk
 $disks
 \`\`\`"
 
@@ -85,7 +87,10 @@ $current_user@$current_hostname ~ # resolvectl
 $resolve
 
 $current_user@$current_hostname ~ # fdisk -l
-$disks</pre></code>"
+$disks
+
+$current_user@$current_hostname ~ # lsblk
+$lsblk</pre></code>"
 
 
 # Save multiline variables to temp files
