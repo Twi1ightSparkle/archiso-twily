@@ -130,7 +130,7 @@ curl \
 
 # Delete .zshrc to not send the Matrix message every time someone logs in
 # Only if hostname is archiso, to not delete the file when testing on other computers
-if [ "$current_hostname" == "archiso" ]
+if [ "$current_hostname" == "archiso-twily" ]
 then
     rm /root/.zshrc
 fi
